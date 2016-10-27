@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static System.Console;
 
 namespace Ch02_Variables
 {
@@ -10,22 +6,22 @@ namespace Ch02_Variables
     {
         static void Main(string[] args)
         {
-            int population = 66000000;
-            double weight = 1.88; // in kilograms
-            decimal price = 4.99M; //int pounds sterling
-            string fruit = "Apples"; // strings use double-quotes
-            char letter = 'Z'; // charas use single-quotes
+            //int population = 66000000;
+            //double weight = 1.88; // in kilograms
+            //decimal price = 4.99M; //int pounds sterling
+            //string fruit = "Apples"; // strings use double-quotes
+            //char letter = 'Z'; // charas use single-quotes
 
-            /*
-                var population = 66000000;
-                var weight = 1.88; // in kilograms
-                var price = 4.99M; // in pounds sterling
-                var fruit = "Apples"; // strings use double-quotes
-                var letter = 'Z'; // chars use single-quotes
-                var happy = true;
-            */
 
-            int defaultValueOfInt = default(int); // 0
+            var population = 66000000;
+            var weight = 1.88; // in kilograms
+            var price = 4.99M; // in pounds sterling
+            var fruit = "Apples"; // strings use double-quotes
+            var letter = 'Z'; // chars use single-quotes
+            var happy = true;
+
+
+            //int defaultValueOfInt = default(int); // 0
 
             int ICannotBeNull = 4;
             ICannotBeNull = default(int); // 0
@@ -43,8 +39,19 @@ namespace Ch02_Variables
             names[3] = "Tom";
             for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine(names[i]); // read the item at this index
+                WriteLine(names[i]); // read the item at this index
             }
+
+            Write($"The population of the UK IS {population}. ");
+            WriteLine($"The population of the UK is {population:N0}.");
+            WriteLine($"{weight}kg of {fruit} cost {price:C}.");
+
+            Write("Type your name and press ENTER: ");
+            string name = ReadLine();
+            Write("Type your age and press: ENTER: ");
+            string age = ReadLine();
+            WriteLine($"Hello {name}, your look good for {age}.");
+
         }
     }
 }
