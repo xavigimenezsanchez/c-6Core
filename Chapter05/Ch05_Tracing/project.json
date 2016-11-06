@@ -1,0 +1,22 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Ch05_Tracing Console Application",
+  "authors": [ "markjprice" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "configurations": {
+    "Debug": {
+      "compilationOptions": {
+        "define": [ "DEBUG", "TRACE", "KERMIT", "FOZZIE" ]
+      }
+    },
+    "Release": {
+      "compilationOptions": {
+        "define": [ "RELEASE", "TRACE" ],
+        "optimize":  true
+      }
+    }
+  }
+}
